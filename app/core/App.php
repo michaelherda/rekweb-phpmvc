@@ -8,7 +8,16 @@ class App{
 
 	public function __construct(){
 		$url = $this->parseURL();
-		var_dump($url);
+		
+		if (file_exists('../app/controllers/'.$url[0]. '.php')) {
+			$this->controller = $url[0];
+			unset($url[0]);
+			var_dump($url);
+		}
+
+
+		require_once '../app/controllers/' . $this->controller . '.php';
+		$this->controller = new $this->controller;
 	}
 
 
@@ -16,8 +25,8 @@ class App{
 		if (isset($_GET['url'])){
 			$url = $_GET['url'];
 			$url = filter_var($url, FILTER_SANITIZE_URL);
-			$url = explode('/', $url)
-			return $url;
+			$url = explode('/', $url);
+			
 		}
 
 	}
