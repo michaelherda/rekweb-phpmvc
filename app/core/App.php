@@ -19,8 +19,9 @@ class App{
 		require_once '../app/controllers/' . $this->controller . '.php';
 		$this->controller = new $this->controller;
 
+		// method
 		if (isset($url[1])) {
-			if (method_exists($this->controller, url[1])) {
+			if (method_exists($this->controller, $url[1])) {
 				$this->method=$url[1];
 				unset($url[1]);
 			}
@@ -34,7 +35,7 @@ class App{
 
 		// jalankan controller dan method serta kirimkan params juika ada
 
-		call_user_func_array([$this->controller, $this->method], $this->);
+		call_user_func_array([$this->controller, $this->method], $this->params);
 
 
 	}
@@ -42,9 +43,10 @@ class App{
 
 	public function parseURL(){
 		if (isset($_GET['url'])){
-			$url = $_GET['url'];
+			$url = rtrim($_GET['url'],'/');
 			$url = filter_var($url, FILTER_SANITIZE_URL);
 			$url = explode('/', $url);
+			return $url;
 			
 		}
 
