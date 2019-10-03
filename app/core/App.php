@@ -27,10 +27,14 @@ class App{
 		}
 
 
-		// // params
-		// if (!empty($url)) {
-		// 	var_dump($url);
-		// }
+		// params
+		if (!empty($url)) {
+			$this->params = array_values($url);
+		}
+
+		// jalankan controller dan method serta kirimkan params juika ada
+
+		call_user_func_array([$this->controller, $this->method], $this->);
 
 
 	}
