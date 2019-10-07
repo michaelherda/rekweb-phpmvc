@@ -36,11 +36,33 @@
       </div>
       <div class="modal-body">
         
-      	<form action="" method="">
+      	<form action="<?=BASEURL;  ?>/mahasiswa/tambah" method="post">
       		<div class="form-group">
-    			<label for="exampleFormControlInput1">Email address</label>
-   				<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
- 				 </div>
+    			<label for="nama">Nama</label>
+   				<input type="text" class="form-control" id="nama" name="nama">
+ 			</div>
+
+ 			<div class="form-group">
+    			<label for="nrp">NRP</label>
+   				<input type="number" class="form-control" id="nrp" name="nrp">
+ 			</div>
+
+ 			<div class="form-group">
+    			<label for="email">Email</label>
+   				<input type="email" class="form-control" id="email" name="email">
+ 			</div>
+
+ 			<div class="form-group">
+ 				<label for="jurusan">Jurusan</label>
+ 				<select class="form-control" id="jurusan">
+     			<option value="Teknik Informatika"e>Teknik Informatika</option>
+     			<option value="Teknologi Pangan"e>Teknologi Pangan</option>
+     			<option value="Teknik Lingkungan"e>Teknik Lingkungan</option>
+     			<option value="Teknik Mesin"e>Teknik Mesin</option>
+     			<option value="Teknik Industri"e>Teknik Industri</option>
+     			<option value="Teknik Planologi"e>Teknik Planologi</option>
+    			</select>
+    		</div>
 
       </div>
       <div class="modal-footer">
