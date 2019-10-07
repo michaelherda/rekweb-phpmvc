@@ -54,20 +54,20 @@
 
  			<div class="form-group">
  				<label for="jurusan">Jurusan</label>
- 				<select class="form-control" id="jurusan">
+ 				<select class="form-control" id="jurusan" name="jurusan">
      			<option value="Teknik Informatika"e>Teknik Informatika</option>
-     			<option value="Teknologi Pangan"e>Teknologi Pangan</option>
-     			<option value="Teknik Lingkungan"e>Teknik Lingkungan</option>
-     			<option value="Teknik Mesin"e>Teknik Mesin</option>
-     			<option value="Teknik Industri"e>Teknik Industri</option>
-     			<option value="Teknik Planologi"e>Teknik Planologi</option>
+     			<option value="Teknologi Pangan">Teknologi Pangan</option>
+     			<option value="Teknik Lingkungan">Teknik Lingkungan</option>
+     			<option value="Teknik Mesin">Teknik Mesin</option>
+     			<option value="Teknik Industri">Teknik Industri</option>
+     			<option value="Teknik Planologi">Teknik Planologi</option>
     			</select>
     		</div>
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Tambah Data</button>
+        <button type="submit" class="btn btn-primary">Tambah Data</button>
     	</form>
       </div>
     </div>
